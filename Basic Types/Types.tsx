@@ -59,3 +59,32 @@ console.log(soyUnaTupla[0].substring(1));
 
 // El indice es mas largo que la tupla
 // soyUnaTupla[3] = 'Mundo';
+
+// Tipos Enum Sirven para otorgar un indice o numero a nuestro conjunto de datos, podemos consultar su posicion haciendo referencia a ellos.
+/* enum Color {
+  Red,
+  Green,
+  Blue,
+}
+let c: Color = Color.Red;
+console.log(c); */
+
+// Podemos establecer los valores de forma manual.
+enum Nombre {
+  Javier = 1,
+  Claudia = 2,
+  Yanina = 4,
+}
+let n: Nombre = Nombre.Yanina;
+console.log(n)
+
+//
+enum Color {
+  Red = 1,
+  Green,
+  Blue,
+}
+let colorName: string = Color[2];
+
+// Displays 'Green'
+console.log(colorName);

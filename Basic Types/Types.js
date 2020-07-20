@@ -39,9 +39,36 @@ var soyUnaTupla;
 soyUnaTupla = ["hello", 10]; // OK
 // No inicializa por error en el orden de los elementos pasados.
 // soyUnaTupla = [10, "hello"]; // Error
-// OK
-console.log(soyUnaTupla[0].substring(0));
+// OK comienza la tupla desde el indice del substring
+console.log(soyUnaTupla[0].substring(1));
 //La propiedad substring no sirve con los de tipo number.
 //console.log(soyUnaTupla[1].substring(1));
 // El indice es mas largo que la tupla
 // soyUnaTupla[3] = 'Mundo';
+// Tipos Enum Sirven para otorgar un indice o numero a nuestro conjunto de datos, podemos consultar su posicion haciendo referencia a ellos.
+/* enum Color {
+  Red,
+  Green,
+  Blue,
+}
+let c: Color = Color.Red;
+console.log(c); */
+// Podemos establecer los valores de forma manual.
+var Nombre;
+(function (Nombre) {
+    Nombre[Nombre["Javier"] = 1] = "Javier";
+    Nombre[Nombre["Claudia"] = 2] = "Claudia";
+    Nombre[Nombre["Yanina"] = 4] = "Yanina";
+})(Nombre || (Nombre = {}));
+var n = Nombre.Yanina;
+console.log(n);
+//
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 1] = "Red";
+    Color[Color["Green"] = 2] = "Green";
+    Color[Color["Blue"] = 3] = "Blue";
+})(Color || (Color = {}));
+var colorName = Color[2];
+// Displays 'Green'
+console.log(colorName);
