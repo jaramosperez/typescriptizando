@@ -50,3 +50,12 @@ let soyUnaTupla: [string, number];
 soyUnaTupla = ["hello", 10]; // OK
 // No inicializa por error en el orden de los elementos pasados.
 // soyUnaTupla = [10, "hello"]; // Error
+
+// OK comienza la tupla desde el indice del substring
+console.log(soyUnaTupla[0].substring(1));
+
+//La propiedad substring no sirve con los de tipo number.
+//console.log(soyUnaTupla[1].substring(1));
+
+// El indice es mas largo que la tupla
+// soyUnaTupla[3] = 'Mundo';
